@@ -657,7 +657,7 @@ PreCommit:
     include: '**/*.rst'
 
   RuboCop:
-    enabled: true
+    enabled: false
     description: 'Analyze with RuboCop'
     required_executable: 'rubocop'
     flags: ['--format=emacs', '--force-exclusion', '--display-cop-names']
