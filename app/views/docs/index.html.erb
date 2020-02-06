@@ -4,13 +4,13 @@
       <% @docs.each do |doc| %>
         <a href="<%= url_for(doc) %>">
           <div class="doc">
-            <p.title>
+            <p class="title">
               <%= doc.title%>
             </p>
-            <p.date>
+            <p class="date">
               <%= time_ago_in_words(doc.created_at) %>
             </p>
-            <p.content>
+            <p class="content">
               <%= truncate(doc.content, length:50) %>
             </p>
           </div>
