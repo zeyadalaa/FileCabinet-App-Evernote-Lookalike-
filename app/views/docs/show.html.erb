@@ -1,13 +1,14 @@
-<p>
-  <strong>Title: </strong>
-  <%= @doc.title %>
-</p>
-
-<p>
-  <strong>content: </strong>
-  <%= @doc.content %>
-</p>
-
-<%= button_to "Show All", docs_path, :method => :get%>
-<%= button_to "Delete" ,doc_path, :method => :delete, data: {confirm: "Are you sure ?"}%>
-<%= button_to "Update" ,edit_doc_path(@doc), :method => :get%>
+<div class="wrapper_with_padding">
+  <div id="doc_show">
+    <h2 class="title">
+      <%= @doc.title %>
+    </h2>
+    <p>
+      <%= simple_format(@doc.content) %>
+    </p>
+    <div class="buttons">
+      <%= link_to "Update" ,edit_doc_path(@doc), class: "button"%>
+      <%= link_to "Delete" ,doc_path(@doc), :method => :delete, data: {confirm: "Are you sure ?"}, class: "button"%>
+    </div>
+  </div>
+</div>
